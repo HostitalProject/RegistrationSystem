@@ -1,0 +1,15 @@
+﻿生成启动时间为 2018/11/27 22:17:05。
+     1>项目“E:\colin\项目\项目文件\1\RegistrationSystem_DoctorClient\RegistrationSystem_DoctorClient\RegistrationSystem_DoctorClient.vcxproj”在节点 2 上(Build 个目标)。
+     1>ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\rc.exe /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /l"0x0804" /IDebug\ /nologo /fo"Debug\RegistrationSystem_DoctorClient.res" RegistrationSystem_DoctorClient.rc 
+       Link:
+         E:\VS2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\colin\项目\项目文件\1\RegistrationSystem_DoctorClient\Debug\RegistrationSystem_DoctorClient.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:E:\VS2012\VC\Include\Manifest\dpiaware.manifest /DEBUG /PDB:"E:\colin\项目\项目文件\1\RegistrationSystem_DoctorClient\Debug\RegistrationSystem_DoctorClient.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\colin\项目\项目文件\1\RegistrationSystem_DoctorClient\Debug\RegistrationSystem_DoctorClient.lib" /MACHINE:X86 Debug\RegistrationSystem_DoctorClient.res
+         Debug\RegistrationSystem_DoctorClient.obj
+         Debug\RegistrationSystem_DoctorClientDlg.obj
+         Debug\stdafx.obj
+         RegistrationSystem_DoctorClient.vcxproj -> E:\colin\项目\项目文件\1\RegistrationSystem_DoctorClient\Debug\RegistrationSystem_DoctorClient.exe
+     1>已完成生成项目“E:\colin\项目\项目文件\1\RegistrationSystem_DoctorClient\RegistrationSystem_DoctorClient\RegistrationSystem_DoctorClient.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.21

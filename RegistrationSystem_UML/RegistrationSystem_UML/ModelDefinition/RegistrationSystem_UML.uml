@@ -1,0 +1,1020 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="ca896966-2528-45ce-af10-24544d18eedf"
+  name="RegistrationSystem_UML" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="c81bf5ef-2da2-4603-828b-2054676b1cc3"
+        name="public Itask" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="703dfc0c-5362-4046-b411-461a0a120168"
+        name="INet"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="3b14ea7e-9d73-4d92-9c90-262f9f736d3f"
+            name="virtual bool InitNetWork"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a38f2b10-8f9f-411b-8bf6-64a56151863a"
+            name="virtual void UnInitNetWorl"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3a80f654-0322-401b-878f-863c259a6121"
+            name="virtural bool SandDate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ff8e3250-c0be-495c-b5c7-903ca75b26e7"
+                  name="SOCKET"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="29a1ce27-7836-4fea-9939-996bf10483e8"
+                  name="char*"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cffb4506-ef19-4280-8dbb-8665b4affccc"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ac200bc6-5c5d-4a09-abbb-4c8d9626e4c2"
+        name="TCPNet"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="531367b3-1113-4608-9b31-4bddfb7687ac"
+            isSubstitutable="false">
+            <classMoniker
+              Id="703dfc0c-5362-4046-b411-461a0a120168"
+              LastKnownName="INet"
+              LastKnownLocation="RegistrationSystem_UML.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="e37ff0ad-4c5e-495a-a0cf-0a2c5ebd33c4"
+            name="SOCKET m_Socklisten"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="7787929d-4a51-4c58-9353-7fb3002b53e5"
+            name="HANDLE m_ThreadAccept"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="8e6cb62d-3236-425e-8e20-045cd8efe3bc"
+            name="bool m_FlagQuit"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="bc659c98-643a-464d-811d-e7cb1b5a47bc"
+            name="list&lt;HANDLE&gt; m_lstThread"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="4f171ca9-a2d6-4f20-9f47-202e390a5fdd"
+            name="bool InitNetWork"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="adfd6e59-2dc5-43b4-bf47-554b7cef4950"
+            name="void UnInitNetWorl"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e7b0969d-dd90-4970-b9f3-2542127f5881"
+            name="static unsigned _stdcall ThreadAccept"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ab5295a3-a667-4ffc-ac7e-a4a19da33788"
+            name="static unsigned _stdcall ThreadRecv"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="322eae41-1e0b-4035-970a-dafc31d816b2"
+        name="Kernel"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedOperations>
+          <operation
+            Id="ff7efd4f-c6f9-4eef-a34b-8fc35f30be63"
+            name="+ + virtual bool open() = 0"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e6c43f89-1d08-45ea-9cab-d58824585d55"
+            name="+ + virtual bool close() = 0"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="49fd8428-e43c-46e2-abe1-9328f5884413"
+            name="+ + virtual bool DealDate() = 0"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="87073b02-8bc2-4eeb-b708-c37f9b5eeb8c"
+        name="TCPKernel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="27f908fd-2eb7-46a9-b4dc-303de2db6edb">
+            <interfaceMoniker
+              Id="322eae41-1e0b-4035-970a-dafc31d816b2"
+              LastKnownName="Kernel"
+              LastKnownLocation="RegistrationSystem_UML.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="d91cc1d9-a820-4a6c-99ba-1a0c45b42151"
+            name="CMyThreadPool m_ThreadPool"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="499a39fa-5421-4b94-a1ac-a424afc3b954"
+            name="CMySql m_sql"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="ad932c66-1c94-46f3-9546-3770cc19eeff"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="92172318-9982-44b5-9cd9-a4de7ccc435d"
+            name="bool open"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="698aca5d-e571-4998-822f-3abf28cfa8b8"
+            name="bool close"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3ea411ff-e559-4ce0-88db-392144d78b26"
+            name="bool DealDate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="5672f83b-e1a0-4d43-8a47-ba73199aac94"
+            name="char* SelectHospital"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d1179df1-fc7c-4fb1-9d70-d757324ae76d"
+            name="bool IsAppointSuccess"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="963ca148-5409-49aa-8fb2-504d1561aa8c"
+            name="void GetDoctorList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="604e333e-35a0-45dc-8c96-2e490236da58"
+            name="void GetPatientToDoctorList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d5a2c36e-763a-4cbe-abc9-2700a0e799e2"
+            name="void RunTask"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="e1568dec-aec3-4c56-9626-4c1899d0af15"
+                  direction="Return"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="c81bf5ef-2da2-4603-828b-2054676b1cc3"
+                      LastKnownName="public Itask"
+                      LastKnownLocation="RegistrationSystem_UML.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="518ef602-e2d7-4957-b3a0-916bc7d64631"
+            name="void StartTranferRq"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="bdb9cf09-5fb9-4136-9c4c-1c4248472284"
+            name="void VideoStreamInfoRq"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="be5ed861-6690-4aef-a346-5f8f6694666f"
+            name="void VideoStreamBlockRq"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="06de55cc-03ae-41f2-97f2-221313b18d03"
+            name="void LoginRQ"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="1edde2b4-020d-40b8-a667-98468ea5f58a"
+            name="void RegisterRQ"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="b6a2cd09-a778-4961-adbf-32cb0d0c7089"
+            name="+ + virtual bool open() = 0"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f5da6eaa-89a1-4c7c-b5bf-293d3f1378df"
+            name="+ + virtual bool close() = 0"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4fa142fa-f6c8-4b7d-af14-521d5308d1aa"
+            name="+ + virtual bool DealDate() = 0"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3de09a98-e665-4146-bd74-65bdc49e3c12"
+        name="Doctor"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="a009635d-bc80-444d-82e8-a7a7ac8214a6">
+            <classMoniker
+              Id="2aec64c5-9b34-4c7b-a607-6b0485362dcd"
+              LastKnownName="Office"
+              LastKnownLocation="RegistrationSystem_UML.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7a5977a9-7795-479f-9b28-2f1b35cac5fa"
+            name="void DoctorRegisterRQ"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="0f2cf842-f857-4a01-9bfd-dfeab588d344"
+            name="void DoctorLoginRQ"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="018286c5-2f9f-448b-9c1d-08c1059844e2"
+            name="bool ISWorking"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2f138560-d4bf-46a1-8991-8eb0fa692933"
+            name="int AppointmentList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3a04266f-312e-4c07-ab11-681aed231625"
+            name="void GetPatientIofo"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2aec64c5-9b34-4c7b-a607-6b0485362dcd"
+        name="Office"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="45fd8688-14cc-477b-b7bb-92ed8a1f3b8d">
+            <classMoniker
+              Id="c881622d-38a8-4a1c-871a-22d74b93cf57"
+              LastKnownName="Hospital"
+              LastKnownLocation="RegistrationSystem_UML.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="338cac31-b979-4956-be14-654ee5890ddb"
+            name="int GetOfficeDoctorList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c881622d-38a8-4a1c-871a-22d74b93cf57"
+        name="Hospital"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="0a98bde6-2ab2-4d7f-8f94-bb6e0e6de79e"
+            name="void Getoffice"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="08c84f6f-12d0-463c-aeee-5ce45fe3c075"
+        name="Patient"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="8490df0c-e9cb-42da-aabf-71248a36bed3"
+            name="void GetDoctorList"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="4af1e1c9-41af-4e8c-bcf7-d7de24d0f4a5"
+            name="void PatientLoginRQ"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ae44fc69-d8d4-451a-8ea2-93b79d13bd15"
+            name="void PatientRegisterRQ"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5735ade7-6fc9-4c9b-8644-6e89c1b9bcf6"
+        name="ThreadPool"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="fac58a0c-e110-4fd4-ac81-39f7d384ecf7">
+            <classMoniker
+              Id="87073b02-8bc2-4eeb-b708-c37f9b5eeb8c"
+              LastKnownName="TCPKernel"
+              LastKnownLocation="RegistrationSystem_UML.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="8a384577-8d56-4d5f-a247-64453133e580"
+            name="class Itask"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="8ac25a41-2310-4d57-8e6d-8dac3bdb67cf"
+            name="class MyLock"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b7ec598a-adea-42f4-8f15-749a7394b189"
+            name="void Unlock()"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="5ecb0650-2f41-4a79-8ccd-49de81ec7f00"
+            name="class CMyThreadPool"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3bb7223f-3bf0-4498-8dd0-5194ff62ab05"
+            name="bool CreateThreadPool"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="afa2706c-c802-4758-80e3-9cdfc9efab5f"
+            name="bool Push"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8a8d92be-20c7-4d6c-9132-37016ee192eb"
+                  name="Itask*"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="98d6e57e-2ab6-40e5-8207-5851e853c18b"
+            name="+ virtural void RunItask()=0"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="7c4da336-ce9c-4271-af32-f9832fbe9a31"
+            name="void DestoryThreadPool"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f0ff20f1-75de-4eea-bf57-30effe27ef4c"
+            name="void Lock"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="e4e955f0-985b-4bac-8b47-33dd7f9b9bf4"
+            name="void Unlock"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9eef9b75-19d4-4f3c-ade4-e98ff3eddfb9"
+        name="Mysql"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="256d16a6-44b4-4251-8a80-8fa74c1199df">
+            <classMoniker
+              Id="87073b02-8bc2-4eeb-b708-c37f9b5eeb8c"
+              LastKnownName="TCPKernel"
+              LastKnownLocation="RegistrationSystem_UML.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5c79eff9-f50c-4aef-984d-e61b6b9319cc"
+        name="PatientNet"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="611a3611-e216-4205-9c89-878b0be5c022">
+            <classMoniker
+              Id="08c84f6f-12d0-463c-aeee-5ce45fe3c075"
+              LastKnownName="Patient"
+              LastKnownLocation="RegistrationSystem_UML.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="8754b9b1-48b5-46e6-9c8f-e092a366fcae"
+            name="virtual bool InitNetWork"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="a14f5bd8-7c02-4466-a59b-678ac430d896"
+            name="virtual void UnInitNetWorl"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="d8ecefd1-a7a2-4aca-a99d-a914127f1f6a"
+            name="virtural bool SandDate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ffd1f68e-ed5e-4a26-8ec1-4bd12530bb59"
+                  name="SOCKET"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c055c2da-c3cf-46d7-a462-e2a6b8db02c7"
+                  name="char*"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0fb9c198-6239-474e-b094-c65363c58bcb"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="250b983a-f3b7-45cb-aa9c-b946e7f7ff7c"
+        name="PatientKernel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="e822c79e-047a-411a-b045-599e2f962750">
+            <classMoniker
+              Id="08c84f6f-12d0-463c-aeee-5ce45fe3c075"
+              LastKnownName="Patient"
+              LastKnownLocation="RegistrationSystem_UML.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="06e78619-4758-48d9-8745-218a3c2b7a97"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ec0979a8-c3a7-4748-b14c-c556f643e577"
+            name="bool open"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="abcad2ed-97e4-4547-ba97-50030fed7522"
+            name="void DeaDate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="2e43efab-5256-4b6a-9aa3-6426a22636e7"
+            name="void close"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="92065bc6-1fa2-4457-83bd-6e01db68e503"
+        name="DoctorNet"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="638ad7df-ce37-4bdf-a0dc-e416c6519602">
+            <classMoniker
+              Id="3de09a98-e665-4146-bd74-65bdc49e3c12"
+              LastKnownName="Doctor"
+              LastKnownLocation="RegistrationSystem_UML.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="136d797c-62ea-4fa6-a94a-8856d7e13e19"
+            name="virtual bool InitNetWork"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="63f20016-d6cf-4548-8918-4f56f999a580"
+            name="virtual void UnInitNetWorl"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="fee2b24c-08e6-4c14-83b7-fb9399496941"
+            name="virtural bool SandDate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fd2ff305-cef0-44db-8aaa-7906e8d05047"
+                  name="SOCKET"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9ee519b6-5d64-4281-a607-48b07331945c"
+                  name="char*"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fa08789d-003e-454e-aa19-5095724c8d8c"
+                  name="int"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8b1867ac-9f45-41d7-8c23-262bd3ac8290"
+        name="FFMPEG"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="05496a2e-d574-47b0-aaa5-688969f0e197">
+            <classMoniker
+              Id="3de09a98-e665-4146-bd74-65bdc49e3c12"
+              LastKnownName="Doctor"
+              LastKnownLocation="RegistrationSystem_UML.uml" />
+          </dependency>
+          <dependency
+            Id="a9c461d1-94e2-4b36-a5fb-c796239bb990">
+            <classMoniker
+              Id="08c84f6f-12d0-463c-aeee-5ce45fe3c075"
+              LastKnownName="Patient"
+              LastKnownLocation="RegistrationSystem_UML.uml" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ddbf1828-7fab-408e-b978-59e7b1823c54"
+        name="DoctorKernel"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="2685a507-df2f-4697-bccb-87128028fd6f">
+            <classMoniker
+              Id="3de09a98-e665-4146-bd74-65bdc49e3c12"
+              LastKnownName="Doctor"
+              LastKnownLocation="RegistrationSystem_UML.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="cdab9d4f-d758-467a-924f-a682162fe04d"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="ab7ea6ee-c297-4b0d-9776-c9c39a5457fa"
+            name="bool open"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="fcf6a889-917c-4ee2-ab01-7253c0187fdc"
+            name="void DeaDate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="9f0375d5-faae-4e2c-a8ad-48e555451fcb"
+            name="void close"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="25fadbaa-0a4c-49eb-a7ec-0acddd659e02"
+            name="void GetVedioStreamInfoRq"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="606833ec-04c3-4e5e-b438-cd0382099ecb"
+                  name="char* szbuf"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="1fa327be-a2e8-489b-a9e9-015d122b2021"
+            name="void GetVedioStreamBlockRq"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d2f2db6e-843a-415b-b2fe-db3316220460"
+                  name="char* szbuf"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
