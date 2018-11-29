@@ -62,7 +62,7 @@ BEGIN_MESSAGE_MAP(CRegistrationSystem_DoctorClientDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
-	
+	ON_BN_CLICKED(IDC_BUTTON1, &CRegistrationSystem_DoctorClientDlg::OnBnClickedButton1)
 END_MESSAGE_MAP()
 
 
@@ -153,3 +153,7 @@ HCURSOR CRegistrationSystem_DoctorClientDlg::OnQueryDragIcon()
 
 
 
+void CRegistrationSystem_DoctorClientDlg::OnBnClickedButton1()
+{
+	// TODO: 在此添加控件通知处理程序代码
+}

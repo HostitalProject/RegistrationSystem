@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D2A28154-309D-48D7-93B2-9B0106E95E47}</ProjectGuid>
+    <ProjectGuid>{C9334B09-48FD-40C5-825E-8C9BB5119FC7}</ProjectGuid>
     <RootNamespace>RegistrationSystem_DoctorClient</RootNamespace>
     <Keyword>MFCProj</Keyword>
   </PropertyGroup>
