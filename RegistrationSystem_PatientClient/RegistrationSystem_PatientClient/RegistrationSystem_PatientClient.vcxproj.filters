@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="NET">
+      <UniqueIdentifier>{be5b6ae2-9142-4908-b8b6-90837f6cb9d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernel">
+      <UniqueIdentifier>{2e8ef7eb-5824-40f6-b618-58557d986ff4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PACKDEF">
+      <UniqueIdentifier>{990a804f-20ff-40d1-98aa-8e9c10336fe5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -33,6 +42,30 @@
     <ClInclude Include="Resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="MyTabCtl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OffToDoc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DocToOff.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Net\INet.h">
+      <Filter>NET</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Net\TCPNet.h">
+      <Filter>NET</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Kernel\IKernel.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Kernel\TCPKernel.h">
+      <Filter>Kernel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Packdef\packdef.h">
+      <Filter>PACKDEF</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RegistrationSystem_PatientClient.cpp">
@@ -43,6 +76,21 @@
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MyTabCtl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="OffToDoc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DocToOff.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Net\TCPNet.cpp">
+      <Filter>NET</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Kernel\TCPKernel.cpp">
+      <Filter>Kernel</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

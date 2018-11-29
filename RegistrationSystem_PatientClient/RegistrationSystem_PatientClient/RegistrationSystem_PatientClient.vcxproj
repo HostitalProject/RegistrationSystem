@@ -54,6 +54,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../Net;../Kernel;../Registration_PatinetClient;../Packdef;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -101,6 +102,14 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Kernel\IKernel.h" />
+    <ClInclude Include="..\Kernel\TCPKernel.h" />
+    <ClInclude Include="..\Net\INet.h" />
+    <ClInclude Include="..\Net\TCPNet.h" />
+    <ClInclude Include="..\Packdef\packdef.h" />
+    <ClInclude Include="DocToOff.h" />
+    <ClInclude Include="MyTabCtl.h" />
+    <ClInclude Include="OffToDoc.h" />
     <ClInclude Include="RegistrationSystem_PatientClient.h" />
     <ClInclude Include="RegistrationSystem_PatientClientDlg.h" />
     <ClInclude Include="Resource.h" />
@@ -108,6 +117,11 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Kernel\TCPKernel.cpp" />
+    <ClCompile Include="..\Net\TCPNet.cpp" />
+    <ClCompile Include="DocToOff.cpp" />
+    <ClCompile Include="MyTabCtl.cpp" />
+    <ClCompile Include="OffToDoc.cpp" />
     <ClCompile Include="RegistrationSystem_PatientClient.cpp" />
     <ClCompile Include="RegistrationSystem_PatientClientDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -127,4 +141,9 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="RegistrationSystem_PatientClient.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>
