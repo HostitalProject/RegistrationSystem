@@ -9,7 +9,7 @@
 #endif
 
 #include "resource.h"		// 主符号
-
+#include "TCPKernel.h"
 
 // CRegistrationSystem_PatientClientApp:
 // 有关此类的实现，请参阅 RegistrationSystem_PatientClient.cpp
@@ -27,6 +27,9 @@ public:
 // 实现
 
 	DECLARE_MESSAGE_MAP()
+public:
+	IKernel*m_pTcpKernel;
+	virtual int ExitInstance();
 };
 
 extern CRegistrationSystem_PatientClientApp theApp;

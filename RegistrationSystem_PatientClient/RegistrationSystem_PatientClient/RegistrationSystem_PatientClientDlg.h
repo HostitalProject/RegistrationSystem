@@ -3,6 +3,7 @@
 //
 
 #pragma once
+#include "mytabctl.h"
 
 
 // CRegistrationSystem_PatientClientDlg ¶Ô»°¿ò
@@ -29,4 +30,9 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnBnClickedButton1();
+public:
+	CMyTabCtl m_TabCtl;
+	bool m_bChangeWndSize;
 };

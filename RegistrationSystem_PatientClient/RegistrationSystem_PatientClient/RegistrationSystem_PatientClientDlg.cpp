@@ -50,18 +50,21 @@ END_MESSAGE_MAP()
 CRegistrationSystem_PatientClientDlg::CRegistrationSystem_PatientClientDlg(CWnd* pParent /*=NULL*/)
 	: CDialogEx(CRegistrationSystem_PatientClientDlg::IDD, pParent)
 {
+	m_bChangeWndSize=false;
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
 void CRegistrationSystem_PatientClientDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Control(pDX, IDC_TAB1, m_TabCtl);
 }
 
 BEGIN_MESSAGE_MAP(CRegistrationSystem_PatientClientDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_BUTTON1, &CRegistrationSystem_PatientClientDlg::OnBnClickedButton1)
 END_MESSAGE_MAP()
 
 
@@ -97,7 +100,11 @@ BOOL CRegistrationSystem_PatientClientDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
-
+	m_TabCtl.InitTabCtrl();
+	RECT rect;
+	theApp.m_pMainWnd->GetWindowRect(&rect);
+	rect.bottom-=280;
+	theApp.m_pMainWnd->MoveWindow(&rect);
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
@@ -150,3 +157,20 @@ HCURSOR CRegistrationSystem_PatientClientDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CRegistrationSystem_PatientClientDlg::OnBnClickedButton1() //点击找医生放大缩小窗口
+{
+	RECT rect;
+	theApp.m_pMainWnd->GetWindowRect(&rect);
+	if(m_bChangeWndSize==false)
+	{
+		rect.bottom+=280;
+	}
+	else
+	{
+		rect.bottom-=280;
+	}
+	m_bChangeWndSize=!m_bChangeWndSize;
+	theApp.m_pMainWnd->MoveWindow(&rect);
+}

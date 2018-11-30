@@ -26,6 +26,7 @@ CRegistrationSystem_PatientClientApp::CRegistrationSystem_PatientClientApp()
 	m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_RESTART;
 
 	// TODO: 在此处添加构造代码，
+	m_pTcpKernel=new TCPKernel;
 	// 将所有重要的初始化放置在 InitInstance 中
 }
 
@@ -100,3 +101,16 @@ BOOL CRegistrationSystem_PatientClientApp::InitInstance()
 	return FALSE;
 }
 
+
+
+int CRegistrationSystem_PatientClientApp::ExitInstance()   //重写一个析构
+{
+	// TODO: 在此添加专用代码和/或调用基类
+	if(m_pTcpKernel)
+	{
+		m_pTcpKernel->Close();
+		delete m_pTcpKernel;
+		m_pTcpKernel=NULL;
+	}
+	return CWinApp::ExitInstance();
+}
