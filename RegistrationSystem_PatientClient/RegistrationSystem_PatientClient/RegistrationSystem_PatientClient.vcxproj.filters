@@ -66,6 +66,9 @@
     <ClInclude Include="..\Packdef\packdef.h">
       <Filter>PACKDEF</Filter>
     </ClInclude>
+    <ClInclude Include="Login.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="RegistrationSystem_PatientClient.cpp">
@@ -91,6 +94,9 @@
     </ClCompile>
     <ClCompile Include="..\Kernel\TCPKernel.cpp">
       <Filter>Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="Login.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

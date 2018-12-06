@@ -108,6 +108,7 @@
     <ClInclude Include="..\Net\TCPNet.h" />
     <ClInclude Include="..\Packdef\packdef.h" />
     <ClInclude Include="DocToOff.h" />
+    <ClInclude Include="Login.h" />
     <ClInclude Include="MyTabCtl.h" />
     <ClInclude Include="OffToDoc.h" />
     <ClInclude Include="RegistrationSystem_PatientClient.h" />
@@ -120,6 +121,7 @@
     <ClCompile Include="..\Kernel\TCPKernel.cpp" />
     <ClCompile Include="..\Net\TCPNet.cpp" />
     <ClCompile Include="DocToOff.cpp" />
+    <ClCompile Include="Login.cpp" />
     <ClCompile Include="MyTabCtl.cpp" />
     <ClCompile Include="OffToDoc.cpp" />
     <ClCompile Include="RegistrationSystem_PatientClient.cpp" />

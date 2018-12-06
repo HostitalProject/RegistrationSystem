@@ -23,11 +23,11 @@ public:
 	void DealData(char* szbuf);
 	bool SendData(char* szbuf,int nlen);
 public:
-    void RegisterRs(char* szbuf);
+   void RegisterRs(char* szbuf);
 	void LoginRs(char* szbuf);
-	void GetRoomInfoRs(char* szbuf); 
+	//void GetRoomInfoRs(char* szbuf); 
 	//void SetRoomInfoRq(SOCKET sock,char* szbuf);
-	 void TCPKernel::SendFileData(char*szpath,char *szFileName);
+	// void TCPKernel::SendFileData(char*szpath,char *szFileName);
 private:
 	INet *m_pNet;
 	

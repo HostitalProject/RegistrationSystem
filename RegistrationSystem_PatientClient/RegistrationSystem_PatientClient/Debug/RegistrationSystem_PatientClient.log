@@ -1,11 +1,19 @@
-﻿生成启动时间为 2018/11/28 23:29:27。
+﻿生成启动时间为 2018/12/6 11:08:43。
      1>项目“C:\Users\LuRex\Desktop\RegistrationSystem\RegistrationSystem\RegistrationSystem_PatientClient\RegistrationSystem_PatientClient\RegistrationSystem_PatientClient.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         C:\VS_2012\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\RegistrationSystem_PatientClient.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt RegistrationSystem_PatientClientDlg.cpp
+         C:\VS_2012\VC\bin\CL.exe /c /I../Net /I../Kernel /I../Registration_PatinetClient /I../Packdef /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\RegistrationSystem_PatientClient.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Login.cpp RegistrationSystem_PatientClient.cpp RegistrationSystem_PatientClientDlg.cpp
+         Login.cpp
+         正在生成代码...
+         正在编译...
          RegistrationSystem_PatientClientDlg.cpp
+         RegistrationSystem_PatientClient.cpp
+         正在生成代码...
        Link:
          C:\VS_2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\LuRex\Desktop\RegistrationSystem\RegistrationSystem\RegistrationSystem_PatientClient\Debug\RegistrationSystem_PatientClient.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:C:\VS_2012\VC\Include\Manifest\dpiaware.manifest /DEBUG /PDB:"C:\Users\LuRex\Desktop\RegistrationSystem\RegistrationSystem\RegistrationSystem_PatientClient\Debug\RegistrationSystem_PatientClient.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\LuRex\Desktop\RegistrationSystem\RegistrationSystem\RegistrationSystem_PatientClient\Debug\RegistrationSystem_PatientClient.lib" /MACHINE:X86 Debug\RegistrationSystem_PatientClient.res
+         Debug\TCPKernel.obj
+         Debug\TCPNet.obj
          Debug\DocToOff.obj
+         Debug\Login.obj
          Debug\MyTabCtl.obj
          Debug\OffToDoc.obj
          Debug\RegistrationSystem_PatientClient.obj
@@ -16,4 +24,4 @@
 
 生成成功。
 
-已用时间 00:00:01.33
+已用时间 00:00:03.32

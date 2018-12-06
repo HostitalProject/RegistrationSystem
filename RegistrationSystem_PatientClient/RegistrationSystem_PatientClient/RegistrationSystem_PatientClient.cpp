@@ -70,7 +70,16 @@ BOOL CRegistrationSystem_PatientClientApp::InitInstance()
 	// TODO: 应适当修改该字符串，
 	// 例如修改为公司或组织名
 	SetRegistryKey(_T("应用程序向导生成的本地应用程序"));
-
+	CLogin login;//定义一个登陆对话框对象
+	if(login.DoModal() == IDCANCEL)//创建一个对话框
+	{
+		// 删除上面创建的 shell 管理器。
+		if (pShellManager != NULL)
+		{
+			delete pShellManager;
+		}
+		return FALSE;
+	}
 	CRegistrationSystem_PatientClientDlg dlg;
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();

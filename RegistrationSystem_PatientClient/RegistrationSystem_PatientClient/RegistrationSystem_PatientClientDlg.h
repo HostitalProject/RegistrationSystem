@@ -4,6 +4,7 @@
 
 #pragma once
 #include "mytabctl.h"
+#include "login.h"
 
 
 // CRegistrationSystem_PatientClientDlg ¶Ô»°¿ò
@@ -35,4 +36,5 @@ public:
 public:
 	CMyTabCtl m_TabCtl;
 	bool m_bChangeWndSize;
+	CLogin m_login;
 };
