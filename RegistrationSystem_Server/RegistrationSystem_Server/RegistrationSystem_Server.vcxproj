@@ -78,12 +78,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\Kernel\TCPKernel.cpp" />
+    <ClCompile Include="..\Mysql\CMySql.cpp" />
     <ClCompile Include="..\Net\TCPNet.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Kernel\IKernel.h" />
     <ClInclude Include="..\Kernel\TCPKernel.h" />
+    <ClInclude Include="..\Mysql\CMySql.h" />
     <ClInclude Include="..\Net\INet.h" />
     <ClInclude Include="..\Net\TCPNet.h" />
     <ClInclude Include="..\Packdef\packdef.h" />

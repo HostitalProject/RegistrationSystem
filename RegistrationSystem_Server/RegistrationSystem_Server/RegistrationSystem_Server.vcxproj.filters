@@ -25,6 +25,9 @@
     <Filter Include="Kernel">
       <UniqueIdentifier>{f1317459-04dd-4ccc-8875-383ae4306fe7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MySQL">
+      <UniqueIdentifier>{5c42556f-7471-4abe-9e67-9668d7cfeb04}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -35,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="..\Kernel\TCPKernel.cpp">
       <Filter>Kernel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Mysql\CMySql.cpp">
+      <Filter>MySQL</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +61,9 @@
     </ClInclude>
     <ClInclude Include="..\ThreadPool\MyThreadPool.h">
       <Filter>ThreadPool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Mysql\CMySql.h">
+      <Filter>MySQL</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
